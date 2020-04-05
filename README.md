@@ -1,6 +1,8 @@
 # Trojan-WebUI
 为Trojan多用户模式打造的管理工具
-
+## 支持TrojanURL，支持ClashR
+[trojan-gfw/trojan](https://github.com/trojan-gfw/trojan "trojan-gfw/trojan")
+[Dreamacro/clash](https://github.com/Dreamacro/clash "Dreamacro/clash")
 
 ## 现在已经实现了基本功能，包括流量的管理，充值，服务器管理，获取，最下边是演示demo和一些演示图片.
 # 1.部署教程
