@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Pragma" content="no-cache,no-store" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Trojan,Never compromise!</title>
+    <style>@import "layui/css/layui.css";@import "layui/css/layui.mobile.css";@import "css/css.css";</style>
+    <style>@import "layer/mobile/need/layer.css";@import "layer/theme/default/layer.css";</style>
+    <script src="layui/layui.js"></script>
+    <script src="js/vueSenser.js"></script>
+    <script src="layer/mobile/layer.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/donghua.js"></script>
+    <script src="js/jiazai.js"></script>
+    <script src="vue/vue.js"></script>
+    <script src="js/htmls.js"></script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin" id="head">
+    <div class="layui-header">
+        <div class="layui-logo">Trojan</div>
+        <ul class="layui-nav layui-layout-right">
+            <li id="leave" class="layui-nav-item"><a onclick="leave()">退出登录</a></li>
+            <li id="more" class="layui-nav-item"><a>更多</a></li>
+        </ul>
+    </div>
+</div>
+<div class="lists">
+    <div class="list_header"></div>
+    <div class="list">基本信息</div>
+    <div class="list">流量充值</div>
+    <div class="list">服务器列表</div>
+</div>
+<div id="apps">
+    <div class="home">
+        <h1>欢迎您：{{user}}</h1>
+        <hr class="layui-bg-black">
+        <h1>流量监控</h1>
+        <p class="data_use">今日已用 {{today()}}</p>
+        <div class="layui-progress layui-progress-big" lay-showpercent="true" lay-filter="demo">
+            <div class="layui-progress-bar layui-bg-red" lay-percent="100%"></div>
+        </div>
+        <p class="data_use">已用{{used_old}} GB/总量 {{max}} GB/剩余 {{haveQuate()}} GB</p><p id="fullData">{{Quate_used()}}</p>
+        <table class="layui-table">
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>用量</th>
+                <th>日期</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,i) in useds">
+                <td>{{item}} GB</td>
+                <td>{{times[i]}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="home">
+        <div class="input_box">
+            <input v-on:keyup.enter="cdkadd" v-model="cdk" type="text" name="title" required lay-verify="required" placeholder="请输入cdk" autocomplete="off" class="layui-input">
+            <br>
+            <button @click="cdkadd" class="layui-btn layui-btn-normal buttons">激活cdk</button>
+        </div>
+    </div>
+    <div class="home">
+        <br>
+        <button onclick="rseUrl()" class="layui-btn layui-btn-normal">重置所有URL</button>
+        <table lay-size="sm" class="layui-table">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>类型</th>
+                <th>地区</th>
+                <th>带宽</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Clash订阅</td>
+                <td>自动</td>
+                <td>自动</td>
+                <td><button class="clash_button clash_button layui-btn layui-btn-normal">复制URL</button></td>
+            </tr>
+            <tr v-for="(Turl,i) in trojan_url">
+                <td>{{url_type[i]}}</td>
+                <td>{{serveraddr[i]}}</td>
+                <td>{{bandwidth[i]}}</td>
+                <td><button class="ccccc layui-btn layui-btn-normal">复制URL</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+<script>
+    var element;
+    layui.use('element', function(){
+        element = layui.element;
+    });
+
+    var logining=false;
+    var apps;
+    load();
+
+</script>
+</html>
