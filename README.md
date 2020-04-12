@@ -26,7 +26,12 @@
 ![markdown](http://qiniu.qxhua21.cn/trojanimg/trojanimg%20%283%29.png)
 ![markdown](http://qiniu.qxhua21.cn/trojanimg/trojanimg%20%284%29.png)
 ![markdown](http://qiniu.qxhua21.cn/trojanimg/trojanimg%20%285%29.png)
-
+## 管理面板
+![markdown](http://qiniu.qxhua21.cn/trojanimgtro%20%281%29.png)
+![markdown](http://qiniu.qxhua21.cn/trojanimgtro%20%282%29.png)
+![markdown](http://qiniu.qxhua21.cn/trojanimgtro%20%282%29.png)
+![markdown](http://qiniu.qxhua21.cn/trojanimgtro%20%284%29.png)
+![markdown](http://qiniu.qxhua21.cn/trojanimgtro%20%285%29.png)
 
 
 ### End
