@@ -6,7 +6,7 @@
 [Dreamacro/clash](https://github.com/Dreamacro/clash "Dreamacro/clash")
 
 ## 现在已经实现了基本功能，包括流量的管理，充值，服务器管理，获取，用户管理，最下边是演示demo和一些演示图片.
-## 如果说是当前功能最全的Trojan面板应该没问题吧（狗头保命）
+### 如果说是当前功能最全的Trojan面板应该没问题吧（狗头保命）
 # 1.部署教程
 下载发行版本；
 导入数据库；
